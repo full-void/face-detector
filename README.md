@@ -1,6 +1,9 @@
 # Face Detector and Scorer Front-end
 A project based on the Zero to Mastery Udemy course. The app provides security, login and signup feature, detect faces, and score them using machine learning. This is the front end made using react
 
+## Demo
+https://face-detector-front.herokuapp.com/
+
 ## Installation
 1. Clone this repo
 2. Run `npm install`
