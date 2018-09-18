@@ -10,6 +10,7 @@ import Rank from './components/Rank/Rank';
 import './App.css';
 import particlesConfig from './particlesConfig'
 import vars from './vars'
+import url  from 'url'
 
 const initialState = {
     input: '',
@@ -58,7 +59,7 @@ class App extends Component {
     };
     onButtonSubmit = () => {
         this.setState({imageUrl: this.state.input});
-        fetch(new URL("imageurl", vars.BACKEND_URL).href, {
+        fetch(url.resolve(vars.BACKEND_URL, "imageurl"), {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

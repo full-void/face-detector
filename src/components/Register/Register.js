@@ -1,5 +1,6 @@
 import React from 'react';
 import vars from '../../vars'
+import url from 'url'
 
 class Register extends React.Component {
     onNameChange = (event) => {
@@ -12,7 +13,7 @@ class Register extends React.Component {
         this.setState({password: event.target.value})
     };
     onSubmitSignIn = () => {
-        fetch(new URL("register", vars.BACKEND_URL).href, {
+        fetch(url.resolve(vars.BACKEND_URL, 'register'), {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

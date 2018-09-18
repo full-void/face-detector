@@ -11,9 +11,7 @@ class Signin extends React.Component {
     };
     onSubmitSignIn = () => {
         console.log("Starting signin");
-        let x = url.resolve(vars.BACKEND_URL, 'signin');
-        console.log(x);
-        fetch("http://localhost:3001/signin", {
+        fetch(url.resolve(vars.BACKEND_URL, 'signin'), {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
